@@ -52,8 +52,8 @@ function App() {
         primaryColor: 'blue',
       }}
     >
-      <Container size="sm" py="xl">
-        <Paper shadow="md" p="xl" radius="md">
+      <Container size="sm">
+        <Paper shadow="md" p="lg" radius="md">
           <Text size="xl" weight={700} align="center" mb="lg">
             Cardiovascular Disease Prediction
           </Text>
@@ -198,13 +198,14 @@ function App() {
 
           {prediction !== null && !error && (
             <Box mt="xl" p="md" bg={prediction === 1 ? 'red.9' : 'green.9'} style={{ borderRadius: '8px' }}>
-              <Text align="center" weight={700}>
+              <Text align="center" weight={700} color="white">
                 {prediction === 1
-                  ? 'High risk of cardiovascular disease detected'
-                  : 'Low risk of cardiovascular disease'
+                  ? 'HIGH RISK of Cardiovascular Disease Detected'
+                  : 'Low risk of Cardiovascular Disease'
                 }
               </Text>
             </Box>
+
           )}
         </Paper>
       </Container>
